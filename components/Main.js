@@ -65,7 +65,6 @@ export default function Main(prop) {
   }, []);
 
   const GetWeather = async e => {
-    const API_KEY = "461ce09e2491b41f399f0cfc60cdf581";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`;
     const request = axios.get(url);
     const response = await request;
