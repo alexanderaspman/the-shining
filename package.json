@@ -20,11 +20,13 @@
     "react-native-elements": "^3.4.2",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "0.17.1",
-    "ansi-regex": ">=5.0.1"
+    "ansi-regex": ">=5.0.1",
+    "node-fetch": ">=2.6.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "ansi-regex": ">=5.0.1"
+    "ansi-regex": ">=5.0.1",
+    "node-fetch": ">=2.6.7"
   },
   "private": true
 }
