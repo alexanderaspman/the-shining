@@ -17,23 +17,26 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       splashScreen();
-    }, 3000);
+    }, 30);
   }, []);
 
-  const [dimensions, setDimensions] = useState({ window });
+  const [dimensions, setDimensions] = useState({ window, screen });
 
   useEffect(() => {
-    const subscription = Dimensions.addEventListener("change", ({ window }) => {
-      setDimensions({ window });
-    });
+    const subscription = Dimensions.addEventListener(
+      "change",
+      ({ window, screen }) => {
+        setDimensions({ window, screen });
+      }
+    );
     return () => subscription?.remove();
   });
 
   return (
     <Wrapper
       style={{
-        width: windowWidth,
-        height: windowHeight
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height
       }}
     >
       {showSplah ? <SplashScreen /> : <Main />}
